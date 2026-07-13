@@ -5,35 +5,174 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Untuk Dewi ❤️</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
+body{
+background:linear-gradient(to bottom,#06142E,#0B2447,#19376D);
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:500px;
+padding:30px;
+border-radius:20px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+text-align:center;
+box-shadow:0 0 25px rgba(255,255,255,.15);
+}
+
+h1{
+font-size:34px;
+margin-bottom:15px;
+}
+
+p{
+line-height:1.7;
+font-size:18px;
+}
+
+button{
+margin-top:25px;
+padding:14px 28px;
+border:none;
+border-radius:30px;
+font-size:18px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.heart{
+position:fixed;
+top:-20px;
+color:#ff5e9c;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+</style>
 </head>
 
 <body>
-
-<div id="stars"></div>
-<div id="hearts"></div>
 
 <div class="container">
 
 <h1>Hai Dewi ❤️</h1>
 
-<p class="subtitle">
-Ada sesuatu yang ingin aku sampaikan...
+<p id="text">
+Ada sesuatu yang sudah lama ingin aku sampaikan...
 </p>
 
-<button id="startBtn">
-✨ Buka Pesan ✨
+<button onclick="bukaPesan()">
+Buka Pesan
 </button>
 
-<div id="countdown"></div>
-
-<div id="message" style="display:none;">
 </div>
 
-</div>
+<script>
 
-<script src="script.js"></script>
+for(let i=0;i<35;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(Math.random()*5+4)+"s";
+
+h.style.fontSize=(Math.random()*20+15)+"px";
+
+document.body.appendChild(h);
+
+}
+
+function bukaPesan(){
+
+document.querySelector(".container").innerHTML=`<h1>Aku Suka Sama Kamu ❤️</h1>
+
+<p>
+Dewi...
+
+Mungkin ini memang cara yang tidak biasa.
+
+Aku membuat halaman kecil ini hanya untukmu.
+
+Setiap kali kita berbincang, aku selalu merasa ada sesuatu yang berbeda.
+
+Aku bersyukur bisa mengenalmu.
+
+Aku tidak tahu bagaimana perasaanmu kepadaku.
+
+Tapi hari ini aku ingin jujur...
+
+Aku menyukaimu.
+
+Dan kalau kamu berkenan...
+
+Aku ingin mengenalmu lebih dekat lagi.
+</p>
+
+<button onclick="jawab()">
+💖 Mau Jadi Pacarku?
+</button>
+`;
+
+}
+
+function jawab(){
+
+document.querySelector(".container").innerHTML=`
+
+<h1>🥹❤️</h1>
+
+<h2>
+Terima kasih sudah membuka halaman ini.
+</h2>
+
+<p>
+
+Apa pun jawabanmu...
+
+Aku akan tetap menghargainya.
+
+Semoga hari ini menjadi awal cerita yang indah untuk kita.
+
+🌹
+
+- Muhammad Ilmi -
+
+</p>
+
+`;
+
+}
+
+</script>
 
 </body>
 </html>
