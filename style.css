@@ -1,0 +1,31 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ff9ec4,#ffd6e8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    max-width:400px;
+}
+
+h1{
+    color:#ff4081;
+}
+
+button{
+    background:#ff4081;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-size:18px;
+}
